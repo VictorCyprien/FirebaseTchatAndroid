@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "790052385387",
+    "firebase_url": "https://chat-2b6b2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "chat-2b6b2",
+    "storage_bucket": "chat-2b6b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790052385387:android:e3d7c1b092b615995bf72e",
+        "android_client_info": {
+          "package_name": "com.example.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790052385387-v24847v1chamcmbjgc120e1jque1qv6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOh_nLUaFuo-U5OaB35cACrk7UX30xmbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790052385387-v24847v1chamcmbjgc120e1jque1qv6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790052385387:android:4c9d453d1a88c4355bf72e",
+        "android_client_info": {
+          "package_name": "com.ocr.firebaseoc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790052385387-v24847v1chamcmbjgc120e1jque1qv6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOh_nLUaFuo-U5OaB35cACrk7UX30xmbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790052385387-v24847v1chamcmbjgc120e1jque1qv6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790052385387:android:ae985e4beea147005bf72e",
+        "android_client_info": {
+          "package_name": "com.project.tchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790052385387-v24847v1chamcmbjgc120e1jque1qv6e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOh_nLUaFuo-U5OaB35cACrk7UX30xmbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790052385387-v24847v1chamcmbjgc120e1jque1qv6e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
