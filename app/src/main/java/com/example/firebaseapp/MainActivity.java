@@ -6,33 +6,27 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button Inscription;
-    private Button Connexion;
+    private Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Inscription = findViewById(R.id.Inscription);
-        Connexion = findViewById(R.id.Connexion);
+        logout = findViewById(R.id.logout);
 
-        Inscription.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
-                finish();
-            }
-        });
-
-        Connexion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-                finish();
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(MainActivity.this, "Utilisateur déconnecté !", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, StartActivity.class));
             }
         });
     }
