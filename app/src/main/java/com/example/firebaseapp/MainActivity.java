@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -82,6 +83,10 @@ public class MainActivity extends FragmentActivity {
             @Override
             public void onClick(View view) {
                 String msg = message.getEditText().getText().toString();
+                if (msg.equals("")){
+                    Toast.makeText(MainActivity.this, "Il n'a pas de message à envoyer", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 TimeZone.setDefault(TimeZone.getTimeZone("Europe/Paris"));
                 String date = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss a").format(Calendar.getInstance().getTime());
                 db.child("messages").push().setValue(new MessageChat(msg, username, user_email, date, null)).addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -94,7 +99,7 @@ public class MainActivity extends FragmentActivity {
         });
 
         adapter = new recyclerViewAdapter(this, list);
-        LinearLayoutManager llm = new LinearLayoutManager(this, RecyclerView.VERTICAL, true);
+        LinearLayoutManager llm = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(llm);
         recyclerView.setAdapter(adapter);
 
@@ -119,9 +124,7 @@ public class MainActivity extends FragmentActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list.clear();
                 for(DataSnapshot snap: snapshot.getChildren()){
-                    Toast.makeText(MainActivity.this, "Get data...", Toast.LENGTH_SHORT).show();
                     MessageChat message = snap.getValue(MessageChat.class);
-                    Toast.makeText(MainActivity.this, message.getMessage(), Toast.LENGTH_SHORT).show();
                     list.add(message);
                     adapter.notifyDataSetChanged();
                 }
