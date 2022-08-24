@@ -5,16 +5,23 @@ public class MessageChat {
     private String username;
     private String email;
     private String date;
+    private String image_attachement;
 
-    public void ChatMessage(String message, String username, String email, String date){
+    //Used by firebase to get data
+    public MessageChat(){
+
+    }
+
+    public MessageChat(String message, String username, String email, String date, String image_attachement) {
         this.message = message;
         this.username = username;
         this.email = email;
         this.date = date;
-    }
+        this.image_attachement = null;
 
-    public void ChatMessage(){
-
+        if (image_attachement != null){
+            this.image_attachement = image_attachement;
+        }
     }
 
     public String getMessage(){
@@ -47,5 +54,13 @@ public class MessageChat {
 
     public void setDate(String date){
         this.date = date;
+    }
+
+    public String getImage_attachement() {
+        return image_attachement;
+    }
+
+    public void setImage_attachement(String image_attachement) {
+        this.image_attachement = image_attachement;
     }
 }
